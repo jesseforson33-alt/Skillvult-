@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SkillVault — discover digital guides, templates, and resources to learn, create, and grow.">
+  <title>SkillVault — Discover. Learn. Create. Grow.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SkillVault home">
+      <span class="brand-mark">S</span>
+      <span><strong>Skill<span>Vault</span></strong><small>Discover. Learn. Create. Grow.</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a class="active" href="#home">Home</a><a href="#products">Explore</a>
+      <a href="#free">Free Resources</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-button" id="cartOpen" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">✦ YOUR DIGITAL GROWTH HUB</span>
+        <h1>Better Skills.<br>Bigger <span>Opportunities.</span></h1>
+        <p>Discover practical guides, templates, and resources to help you learn, create, work, and grow — no matter where you are.</p>
+        <form class="search-bar" id="searchForm">
+          <label class="sr-only" for="searchInput">Search products</label>
+          <span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search guides, templates, resources…">
+          <button type="submit">Search</button>
+        </form>
+        <div class="trust-row"><span>⚡ Easy to use</span><span>◇ Instant access*</span><span>∞ Learn at your pace</span></div>
+        <small class="fine-print">*Downloads are demo-only until real product files and delivery are configured.</small>
+      </div>
+      <div class="hero-art" aria-label="Illustration of digital resources">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-card card-a">✦<br><small>GUIDES</small></div>
+        <div class="floating-card card-b">▤<br><small>TEMPLATES</small></div>
+        <div class="floating-card card-c">▶<br><small>CREATOR</small></div>
+        <div class="vault-box"><span class="vault-symbol">S</span><b>SkillVault</b><small>YOUR NEXT SKILL IS INSIDE</small></div>
+      </div>
+    </section>
+
+    <section class="section-wrap categories">
+      <div class="section-heading"><div><h2>Explore by Category</h2><p>Find what you need, when you need it.</p></div><a href="#products">View all products ↗</a></div>
+      <div class="category-grid">
+        <button class="category" data-category="Guides & eBooks"><span>📘</span><b>Guides & eBooks</b><small>Learn new skills</small></button>
+        <button class="category" data-category="Student Resources"><span>🎓</span><b>Student Resources</b><small>Study smarter</small></button>
+        <button class="category" data-category="Creator Tools"><span>🎨</span><b>Creator Tools</b><small>Build your brand</small></button>
+        <button class="category" data-category="Business Templates"><span>💼</span><b>Business Templates</b><small>Grow your business</small></button>
+        <button class="category" data-category="Productivity"><span>🔑</span><b>Productivity</b><small>Get more done</small></button>
+        <button class="category" data-category="All"><span>▦</span><b>All Products</b><small>View everything</small></button>
+      </div>
+    </section>
+
+    <section class="section-wrap products-section" id="products">
+      <div class="section-heading"><div><h2>Featured Products</h2><p>Useful digital resources to help you get ahead.</p></div><span class="result-label" id="resultLabel">3 products</span></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>No products matched that search. Try another keyword.</div>
+    </section>
+
+    <section class="section-wrap free-banner" id="free">
+      <div class="gift-icon">✧</div><div><h3>Get Started for Free</h3><p>Explore free resources and try a sample before choosing a product.</p></div>
+      <button class="button button-outline" id="freeButton">Explore free resources ↗</button>
+    </section>
+
+    <section class="section-wrap about-section" id="about">
+      <span class="eyebrow">WHY SKILLVAULT?</span><h2>Small steps. Useful skills. Bigger possibilities.</h2>
+      <p>SkillVault is being built to make practical digital resources easier to find and use. Our goal is to offer clear, approachable tools for learners, creators, and small businesses.</p>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">S</span><span><strong>Skill<span>Vault</span></strong><small>Discover. Learn. Create. Grow.</small></span></a>
+    <p>Have a question? Add your business email here before launch.</p>
+    <small>© <span id="year"></span> SkillVault. Built to help you grow.</small>
+  </footer>
+
+  <div class="overlay" id="cartOverlay" hidden>
+    <aside class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-heading"><h2 id="cartTitle">Your Cart</h2><button id="cartClose" aria-label="Close cart">✕</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-bottom"><div><span>Estimated total</span><strong id="cartTotal">₵0</strong></div>
+        <button class="button" id="checkoutButton">Continue to checkout</button>
+        <p class="fine-print">Demo only: checkout and payment are not connected yet.</p>
+      </div>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
